@@ -13,14 +13,13 @@ class TodoController extends Controller
         $todos = todo::all();
         return view('index', compact('todos'));
     }
-    public function create()
-    {
-        return view('create');
-    }
+    
     public function store(TodoRequest $request)
     {
+        $form = new todo();
         $form = $request->all();
-        $form->save();
+        unset($form['_token']);
+        Todo::save($form);
         return redirect('/');
     }
 }

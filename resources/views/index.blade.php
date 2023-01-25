@@ -14,7 +14,7 @@
         <form action="/todos/create" method="post">
         @csrf
           @error('content')
-          {{$message}}
+          <p>{{$message}}</p>
           @enderror
           <input type="text" name="content">
           <input class="button-add" type="submit" value="追加">
