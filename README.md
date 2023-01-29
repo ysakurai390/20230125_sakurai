@@ -62,3 +62,34 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+# アプリケーション名
+todo管理アプリ
+<href="/resources/image/index.png">
+
+
+## 作成した目的
+todo管理を行うため
+
+## 機能一覧
+todoの追加機能
+todoの更新機能
+todoの削除機能
+
+## 使用技術（実行環境）
+Laravel
+eloquent
+PHP
+HTML
+CSS
+
+## テーブル設計
+<href="/resources/image/table.png">
+
+## ER図
+<href="/resources/image/ER.png">
+
+
+## 他に記載することがあれば記述する
+例） ## 環境構築、## アカウントの種類（テストユーザーなど）

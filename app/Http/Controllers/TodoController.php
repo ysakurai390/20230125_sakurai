@@ -19,7 +19,22 @@ class TodoController extends Controller
         $form = new todo();
         $form = $request->all();
         unset($form['_token']);
-        Todo::save($form);
+        Todo::create($form);
+        return redirect('/');
+    }
+    public function update(TodoRequest $request)
+    {
+        $form = $request->all();
+        unset($form['_token']);
+        //Todo::where('id', $request->id)->update($form);
+        Todo::find($request->id)->update($form);
+        return redirect('/');
+    }
+
+    public function destroy(Request $request)
+    {
+        $form = Todo::find($request->id);
+        Todo::find($request->id)->delete();
         return redirect('/');
     }
 }
